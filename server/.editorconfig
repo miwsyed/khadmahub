@@ -1,0 +1,36 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{cs,csproj,json,yml,yaml,md}]
+indent_size = 4
+
+[*.cs]
+# Make StyleCop-like analyzer noise intentionally narrow; keep the project readable.
+dotnet_diagnostic.CA1822.severity = none
+# Keep the project explicit and testable; broad analyzers are useful but some suggestions are noisy.
+dotnet_diagnostic.CA2007.severity = none
+# We intentionally keep domain and API names such as Error/RefreshToken/Shared as part of the product design.
+dotnet_diagnostic.CA1716.severity = none
+dotnet_diagnostic.CA1724.severity = none
+# The Result pattern intentionally uses implicit conversion operators and generic static factory methods.
+dotnet_diagnostic.CA1000.severity = none
+dotnet_diagnostic.CA2225.severity = none
+# We accept a small set of validation and logger-message suppressions to keep the code clear and maintainable in a high-throughput API.
+dotnet_diagnostic.CA1062.severity = none
+dotnet_diagnostic.CA1848.severity = none
+dotnet_diagnostic.CA1308.severity = none
+dotnet_diagnostic.CA1850.severity = none
+# Use file-scoped namespaces and global usings by convention.
+dotnet_diagnostic.IDE0160.severity = suggestion
+# Avoid forcing magic string lengths for entity names.
+dotnet_diagnostic.CA1861.severity = none
+
+[*.md]
+trim_trailing_whitespace = false

@@ -1,0 +1,74 @@
+/*
+  KhadmaHub design tokens
+  Palette grounded in Basra: Shatt al-Arab teal, riverside sand,
+  official-seal brick red, and brass/gold for civic accents.
+*/
+:root {
+  color-scheme: light;
+
+  /* Core palette */
+  --ink-900: #16241f;
+  --ink-700: #2d3d36;
+  --ink-500: #5a6a63;
+  --ink-300: #8d998f;
+
+  --teal-900: #0d3733;
+  --teal-800: #124941;
+  --teal-700: #185a50;
+  --teal-100: #e3ede9;
+
+  --sand-050: #faf8f2;
+  --sand-100: #f4efe0;
+  --sand-200: #ece2c8;
+
+  --brick-700: #7a2a24;
+  --brick-600: #92352c;
+  --brick-500: #a8402f;
+
+  --brass-500: #b5872f;
+  --brass-300: #d8b46a;
+
+  --white: #ffffff;
+  --line: rgba(22, 36, 31, 0.14);
+  --line-strong: rgba(22, 36, 31, 0.24);
+
+  --danger-bg: #fbeaea;
+  --danger-text: #8a2a24;
+  --danger-border: #e2b3ac;
+
+  --success-bg: #e7f1e6;
+  --success-text: #2c5c34;
+  --success-border: #b7d4b4;
+
+  /* Typography */
+  --font-display: "Noto Sans Arabic", "Noto Naskh Arabic", "Scheherazade New", "Cairo", "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  --font-body: "Noto Sans Arabic", "Noto Naskh Arabic", "Scheherazade New", "IBM Plex Sans Arabic", "Cairo", "Segoe UI", Tahoma, sans-serif;
+
+  --fs-2xs: 0.75rem;
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: 2.25rem;
+
+  /* Spacing scale */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  --shadow-card: 0 1px 2px rgba(22, 36, 31, 0.07), 0 12px 28px -16px rgba(13, 55, 51, 0.35);
+  --shadow-pop: 0 4px 14px -4px rgba(13, 55, 51, 0.28);
+
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}

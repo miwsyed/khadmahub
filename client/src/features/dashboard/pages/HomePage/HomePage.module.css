@@ -1,0 +1,82 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-5);
+  background: linear-gradient(135deg, var(--teal-900) 0%, #0a2b28 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  color: var(--sand-050);
+  margin-bottom: var(--sp-6);
+}
+
+.bannerKicker {
+  font-size: var(--fs-xs);
+  color: var(--brass-300);
+  font-weight: 600;
+}
+
+.bannerTitle {
+  font-size: var(--fs-2xl);
+  color: var(--sand-050);
+  margin-top: var(--sp-1);
+}
+
+.bannerBody {
+  margin-top: var(--sp-2);
+  font-size: var(--fs-sm);
+  color: rgba(250, 248, 242, 0.72);
+  max-width: 48ch;
+  line-height: 1.5;
+}
+
+.bannerStats {
+  display: flex;
+  gap: var(--sp-6);
+  margin: 0;
+  flex: none;
+}
+
+.bannerStats dt {
+  font-size: var(--fs-2xs);
+  color: rgba(250, 248, 242, 0.6);
+}
+
+.bannerStats dd {
+  margin: 4px 0 0;
+  font-size: var(--fs-2xl);
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--brass-300);
+}
+
+.sectionHeader {
+  margin-bottom: var(--sp-4);
+}
+
+.sectionTitle {
+  font-size: var(--fs-xl);
+}
+
+.sectionSubtitle {
+  margin-top: 4px;
+  font-size: var(--fs-sm);
+  color: var(--ink-500);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--sp-4);
+}
+
+@media (max-width: 700px) {
+  .banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bannerStats {
+    gap: var(--sp-5);
+  }
+}

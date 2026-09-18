@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Scheherazade+New:wght@400;500;600;700&family=Lateef:wght@400;500;600;700&display=swap");
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  color-scheme: light;
+  scrollbar-color: rgba(181, 135, 47, 0.9) rgba(13, 55, 51, 0.12);
+  scrollbar-width: thin;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  line-height: 1.6;
+  color: var(--ink-900);
+  background-color: var(--sand-050);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-align: start;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(181, 135, 47, 0.9) rgba(13, 55, 51, 0.12);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(13, 55, 51, 0.12);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(181, 135, 47, 0.9);
+  border-radius: 999px;
+  border: 2px solid rgba(13, 55, 51, 0.12);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(181, 135, 47, 1);
+}
+
+html[dir="rtl"] body {
+  direction: rtl;
+  font-family: var(--font-body);
+}
+
+html[dir="ltr"] body {
+  direction: ltr;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--teal-900);
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* Visible keyboard focus everywhere, no exceptions */
+:focus-visible {
+  outline: 2px solid var(--brass-500);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+::selection {
+  background: var(--brass-300);
+  color: var(--ink-900);
+}

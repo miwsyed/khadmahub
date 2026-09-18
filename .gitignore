@@ -1,0 +1,21 @@
+# Node / frontend
+client/node_modules/
+client/dist/
+client/.vite/
+client/*.tsbuildinfo
+
+# .NET / backend
+server/**/bin/
+server/**/obj/
+server/.vs/
+server/**/*.user
+server/**/*.suo
+server/**/*.db
+server/**/*.db-shm
+server/**/*.db-wal
+
+# General
+.env
+.env.*
+.DS_Store
+Thumbs.db

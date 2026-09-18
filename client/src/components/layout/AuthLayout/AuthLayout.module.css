@@ -1,0 +1,231 @@
+.shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+}
+
+.brandPanel {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(165deg, var(--teal-900) 0%, #0a2b28 62%, #071e1b 100%);
+  display: flex;
+  align-items: center;
+  padding: var(--sp-8) var(--sp-7);
+}
+
+.brandPanel :global(.lattice-pattern) {
+  position: absolute;
+  inset: 0;
+}
+
+.brandPanel::after {
+  content: "";
+  position: absolute;
+  inset-inline-end: -120px;
+  bottom: -140px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(216, 180, 106, 0.16) 0%, rgba(216, 180, 106, 0) 70%);
+}
+
+.brandContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-7);
+  max-width: 440px;
+}
+
+.brandMark {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.brandTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  min-width: 0;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--sand-050);
+  letter-spacing: 0.01em;
+}
+
+.brandCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.brandKicker {
+  font-size: var(--fs-sm);
+  color: var(--brass-300);
+  font-weight: 600;
+}
+
+.brandHeadline {
+  font-size: var(--fs-3xl);
+  line-height: 1.2;
+  color: var(--sand-050);
+  font-weight: 600;
+  max-width: 22ch;
+}
+
+.brandBody {
+  font-size: var(--fs-md);
+  line-height: 1.6;
+  color: rgba(250, 248, 242, 0.72);
+  max-width: 42ch;
+}
+
+.directorateList {
+  list-style: none;
+  margin: 0;
+  padding: var(--sp-5) 0 0;
+  border-top: 1px solid rgba(250, 248, 242, 0.16);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3) var(--sp-4);
+}
+
+.directorateList li {
+  position: relative;
+  padding-inline-start: var(--sp-3);
+  font-size: var(--fs-xs);
+  color: rgba(250, 248, 242, 0.68);
+  line-height: 1.4;
+}
+
+.directorateList li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 6px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--brass-300);
+}
+
+.formPanel {
+  background: var(--sand-050);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-6) var(--sp-5);
+}
+
+.formPanelInner {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+}
+
+.mobileBrand {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--teal-900);
+}
+
+.mobileBrandLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.formCard {
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.eyebrow {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--brick-600);
+}
+
+.title {
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  max-width: 12ch;
+}
+
+.subtitle {
+  font-size: var(--fs-sm);
+  color: var(--ink-500);
+  line-height: 1.5;
+  margin-top: calc(var(--sp-1) * -1);
+  max-width: 44ch;
+}
+
+.footer {
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--ink-500);
+}
+
+@media (max-width: 900px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .brandPanel {
+    display: none;
+  }
+
+  .mobileBrand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-2);
+    flex-wrap: wrap;
+  }
+
+  .formPanel {
+    padding: var(--sp-6) var(--sp-4);
+  }
+}
+
+@media (max-width: 520px) {
+  .formPanelInner {
+    max-width: 100%;
+  }
+
+  .mobileBrand {
+    font-size: var(--fs-md);
+    justify-content: space-between;
+  }
+
+  .mobileBrandLabel {
+    min-width: 0;
+  }
+
+  .formCard {
+    padding: var(--sp-5) var(--sp-4);
+  }
+}
